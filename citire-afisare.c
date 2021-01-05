@@ -19,6 +19,40 @@ void citire( int v[10][10][10] )
 
 void afisare( int cub[10][10][10] ) {
     FILE *f = fopen("afisare.txt", "w");
+    for (int j = 0; j < 3; j++) {
+        fprintf(f, "\t\t\t");
+        for (int k = 0; k < 3; k++)
+            fprintf(f, "%d  ", cub[3][j][k]);
+        fprintf(f, "\n");
+    }
+    fprintf(f, "\n");
+    for (int j = 0; j < 3; j++) {
+        fprintf(f, "\t\t\t");
+        for (int k = 0; k < 3; k++)
+            fprintf(f, "%d  ", cub[5][j][k]);
+        fprintf(f, "\n");
+    }
+
+    fprintf(f, "\n");
+    for (int j = 0; j < 3; j++) {
+        for (int k = 0; k < 3; k++)
+            fprintf(f, "%d  ", cub[4][j][k]);
+        fprintf(f, "\t");
+        for (int k = 0; k < 3; k++)
+            fprintf(f, "%d  ", cub[1][j][k]);
+        fprintf(f, "\t");
+        for (int k = 0; k < 3; k++)
+            fprintf(f, "%d  ", cub[2][j][k]);
+        fprintf(f, "\n");
+    }
+    fprintf(f, "\n");
+    for (int j = 0; j < 3; j++) {
+        fprintf(f, "\t\t\t");
+        for (int k = 0; k < 3; k++)
+            fprintf(f, "%d  ", cub[0][j][k]);
+        fprintf(f, "\n");
+    }
+/*
     for (int i = 0; i < 6; i++) {
         fprintf(f, "fata\n");
         for (int j = 0; j < 3; j++) {
@@ -27,5 +61,6 @@ void afisare( int cub[10][10][10] ) {
             fprintf(f, "\n");
         }
     }
+    */
     fclose(f);
 }
