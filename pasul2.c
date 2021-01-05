@@ -37,11 +37,18 @@ void colt(int cub[10][10][10]){
         up_face_prim(cub);
         left_face_prim(cub);
     }
+    int nr = 0;
     while(verificare(cub[1][2][2], cub[0][0][2], cub[2][2][0], 0, cub[1][1][1], cub[2][1][1]) == 0){
         right_face(cub);
         up_face_prim(cub);
         right_face_prim(cub);
+        nr++;
+        if(nr == 6)
+            break;
     }
+    if(nr == 6)
+        printf("Eroare la pasul 2");
+    nr = 0 ;
     while(cub[0][0][2] != 0)
     {
         right_face(cub);
@@ -51,7 +58,12 @@ void colt(int cub[10][10][10]){
         right_face(cub);
         up_face(cub);
         right_face_prim(cub);
+        nr++;
+        if(nr == 6)
+            break;
     }
+    if(nr == 6)
+        printf("Eroare la pasul 2");
 }
 
 void completare_alb(int cub[10][10][10]){
