@@ -84,7 +84,7 @@ void cruce(int cub[10][10][10] ) {
     middle_face(cub);
     down_face(cub);
     cruce_maker(cub);//a treia piesa
-//    afisare(cub);
+   // afisare(cub);
     up_face(cub);
     middle_face(cub);
     down_face(cub);
@@ -93,4 +93,9 @@ void cruce(int cub[10][10][10] ) {
     up_face(cub);
     middle_face(cub);
     down_face(cub);
+    if(cub[1][2][1] != cub[1][1][1] || cub[2][2][1] != cub[2][1][1] || cub[4][1][1] != cub[4][2][1] || cub[3][1][1] != cub[3][0][1])
+        printf("Eroare la creare cruce");
+    else
+        if(cub[0][1][1] != cub[0][0][1] || cub[0][0][1] != cub[0][1][2] || cub[0][1][2] != cub[0][2][1] || cub[0][2][1] != cub[0][1][0])
+            printf("Eroare la creare cruce");
 }

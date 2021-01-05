@@ -2,18 +2,17 @@
 #include "citire-afisare.h"
 #include "rotire-cub.h"
 #include "pasul1(crucea).h"
+#include "pasul2.h"
+#include "verificare_cub.h"
+#include "pasul3.h"
 int main() {
-int cub[10][10][10];
 
+int cub[10][10][10];
 citire(cub);
-//front_face(cub);
-//right_face(cub);
-//right_face(cub);
-//left_face(cub);
-//up_face(cub);
-//down_face(cub);
-//middle_face(cub);
-//down_face(cub);
-cruce(cub);
+if(verificare_cub(cub) == 0)
+    printf("Cubul introdus nu este corect");
+cruce(cub);//pasul1
+completare_alb(cub);//pasul2
+layer2(cub);//pasul3
 afisare(cub);
 }
