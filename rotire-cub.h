@@ -1,11 +1,10 @@
-#define pragmaonce
 /*
- * 0 - jos
- * 1 - fat
- * 2 - dreapta
- * 3 - spate
- * 4 - stanga
- * 5 - sus
+ * 0 - jos, alb
+ * 1 - fata, verde
+ * 2 - dreapta, portocaliu
+ * 3 - spate, albastru
+ * 4 - stanga, rosu
+ * 5 - sus, galben
  */
 void right_face(int cub[10][10][10]);//R
 void left_face(int cub[10][10][10]);//pe invers fata de cum e in regulament(L <- LI)

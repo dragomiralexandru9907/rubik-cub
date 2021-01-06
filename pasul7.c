@@ -4,6 +4,10 @@
 #include "citire-afisare.h"
 #include "stdio.h"
 
+/**@brief
+ *
+ * @param cub cubul rubik
+ */
 void algorithm_pasul7(int cub[10][10][10]){
     front_face_prim(cub);
     front_face_prim(cub);

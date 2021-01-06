@@ -1,4 +1,3 @@
-#define pragmaonce
 
 int verificare_pozitie_colturi(int cub[10][10][10]);
 void pozitionare_colturi(int cub[10][10][10]);

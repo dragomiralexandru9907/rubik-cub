@@ -3,7 +3,10 @@
 #include "verificare_cub.h"
 #include "stdio.h"
 #include "citire-afisare.h"
-
+/**@brief
+ *
+ * @param cub cubul rubik
+ */
 void pozitionare_piesa_dreapta(int cub[10][10][10]){
     up_face(cub);
     right_face(cub);
@@ -25,6 +28,8 @@ void pozitionare_piesa_stanga(int cub[10][10][10]){
     front_face(cub);
 }
 void layer2_peace_by_peace(int cub[10][10][10]){
+    if(cub[1][1][2] == cub[2][1][1] && cub[2][1][0] == cub[1][1][1])
+        pozitionare_piesa_dreapta(cub);
     if(verif(cub[1][1][1], cub[2][1][1], cub[2][1][2], cub[3][1][2]))
     {
         up_face(cub);
@@ -42,13 +47,15 @@ void layer2_peace_by_peace(int cub[10][10][10]){
     {
         up_face(cub);
         down_face(cub);
-        middle_face(cub);up_face(cub);
+        middle_face(cub);
+        up_face(cub);
         down_face(cub);
         middle_face(cub);
         pozitionare_piesa_dreapta(cub);
         up_face(cub);
         down_face(cub);
-        middle_face(cub);up_face(cub);
+        middle_face(cub);
+        up_face(cub);
         down_face(cub);
         middle_face(cub);
     }
@@ -104,5 +111,5 @@ void layer2(int cub[10][10][10]){
     up_face(cub);
     middle_face(cub);
     down_face(cub);
-    afisare(cub);
+    //afisare(cub);
 }

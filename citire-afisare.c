@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include "citire-afisare.h"
 
-
+/**@brief
+ *
+ * @param fata retine culoarea fetei citite
+ * @param f fisierul de unde se preiau datele
+ */
 void citire_fata_cub(int fata[10][10], FILE *f){
 
     for( int i = 0 ; i < 3 ; i ++ )

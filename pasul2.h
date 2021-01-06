@@ -1,4 +1,3 @@
-#define pragmaonce
 
 void completare_alb(int cub[10][10][10]);
 void colt(int cub[10][10][10]);

@@ -3,6 +3,16 @@
 #include "rotire-cub.h"
 #include "citire-afisare.h"
 
+/**@brief
+ *
+ * @param x culorile piesei
+ * @param y
+ * @param z
+ * @param culoare0 culorile piesei cautate
+ * @param culoare1
+ * @param culoare2
+ * @return 1 daca piesa este cea cautata, 0 altfel
+ */
 int verificare(int x, int y, int z, int culoare0, int culoare1, int culoare2)
 {//verifca daca piesa este cea cautata
     if(x == culoare0 && y == culoare1 && z == culoare2)

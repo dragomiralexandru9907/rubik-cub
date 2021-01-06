@@ -1,6 +1,11 @@
 #include "rotire-cub.h"
 #include "stdio.h"
 
+/**@brief
+ *
+ * @param cub cubul rubik
+ * @param fata culoarea fetei cubului rubik pe care vrem sa efectuam rotirea
+ */
 void rotire_fata( int cub[10][10][10], int fata)
 {
     int aux1, aux2 ;

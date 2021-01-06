@@ -3,6 +3,10 @@
 #include "rotire-cub.h"
 #include "citire-afisare.h"
 
+/**@brief
+ *
+ * @param cub cubul rubik
+ */
 void cruce_maker(int cub[10][10][10])
 {
     int culoare1 = cub[1][1][1], culoare2 = cub[0][1][1];
@@ -94,8 +98,8 @@ void cruce(int cub[10][10][10] ) {
     middle_face(cub);
     down_face(cub);
     if(cub[1][2][1] != cub[1][1][1] || cub[2][2][1] != cub[2][1][1] || cub[4][1][1] != cub[4][2][1] || cub[3][1][1] != cub[3][0][1])
-        printf("Eroare la creare cruce");
+        printf("Eroare la pasul 1");
     else
         if(cub[0][1][1] != cub[0][0][1] || cub[0][0][1] != cub[0][1][2] || cub[0][1][2] != cub[0][2][1] || cub[0][2][1] != cub[0][1][0])
-            printf("Eroare la creare cruce");
+            printf("Eroare la pasul 1");
 }
