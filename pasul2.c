@@ -7,13 +7,13 @@ int verificare(int x, int y, int z, int culoare0, int culoare1, int culoare2)
 {//verifca daca piesa este cea cautata
     if(x == culoare0 && y == culoare1 && z == culoare2)
         return 1;
-    if(x == culoare0 && y == culoare2 && z == culoare1)
-        return 1;
     if(x == culoare1 && y == culoare2 && z == culoare0)
+        return 1;
+    if(x == culoare2 && y == culoare0 && z == culoare1)
         return 1;
     if(x == culoare1 && y == culoare0 && z == culoare2)
         return 1;
-    if(x == culoare2 && y == culoare0 && z == culoare1)
+    if(x == culoare0 && y == culoare2 && z == culoare1)
         return 1;
     if(x == culoare2 && y == culoare1 && z == culoare0)
         return 1;
@@ -43,11 +43,13 @@ void colt(int cub[10][10][10]){
         up_face_prim(cub);
         right_face_prim(cub);
         nr++;
-        if(nr == 6)
+        if(nr == 4 )
+            up_face(cub);
+        if(nr == 8)
             break;
     }
-    if(nr == 6)
-        printf("Eroare la pasul 2");
+    if(nr == 8)
+        printf("Eroare la pasul 2\n");
     nr = 0 ;
     while(cub[0][0][2] != 0)
     {
@@ -59,11 +61,11 @@ void colt(int cub[10][10][10]){
         up_face(cub);
         right_face_prim(cub);
         nr++;
-        if(nr == 6)
+        if(nr == 8)
             break;
     }
-    if(nr == 6)
-        printf("Eroare la pasul 2");
+    if(nr == 8)
+        printf("Eroare la pasul 2'\n");
 }
 
 void completare_alb(int cub[10][10][10]){
@@ -85,4 +87,5 @@ void completare_alb(int cub[10][10][10]){
     up_face(cub);
     middle_face(cub);
     down_face(cub);
+    //afisare(cub);
 }

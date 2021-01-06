@@ -31,5 +31,5 @@ void top_x(int cub[10][10][10]){
             break;
     }
     if (ok == 4)
-        printf("Eroare la pasul 4");
+        printf("Eroare la pasul 4\n");
 }

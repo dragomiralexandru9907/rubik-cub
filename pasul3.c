@@ -1,6 +1,8 @@
 #include "pasul3.h"
 #include "rotire-cub.h"
 #include "verificare_cub.h"
+#include "stdio.h"
+#include "citire-afisare.h"
 
 void pozitionare_piesa_dreapta(int cub[10][10][10]){
     up_face(cub);
@@ -102,4 +104,5 @@ void layer2(int cub[10][10][10]){
     up_face(cub);
     middle_face(cub);
     down_face(cub);
+    afisare(cub);
 }

@@ -1,6 +1,8 @@
 #include "pasul5.h"
 #include "rotire-cub.h"
 #include "stdio.h"
+#include "citire-afisare.h"
+#include "stdio.h"
 
 void algorithm_pasul5(int cub[10][10][10]){
     right_face(cub);
@@ -52,5 +54,6 @@ void creare_fata_galbena(int cub[10][10][10]){
             break;
     }
     if(ok == 6)
-        printf("Eroare la pasul 5");
+        printf("Eroare la pasul 5\n");
+    //afisare(cub);
 }

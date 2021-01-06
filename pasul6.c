@@ -1,6 +1,8 @@
 #include "pasul6.h"
 #include "rotire-cub.h"
 #include "stdio.h"
+#include "citire-afisare.h"
+#include "stdio.h"
 
 void algorithm_pasul6(int cub[10][10][10]){
     right_face_prim(cub);
@@ -49,7 +51,7 @@ void pozitionare_colturi(int cub[10][10][10])
             break;
     }
     if(nr == 6)
-        printf("Eroare la pasul 6");
+        printf("Eroare la pasul 6\n");
     nr = 0;
     while (verificare_pozitie_colturi(cub) == 0){
         for (int i = 0; i < 4; i++) {
@@ -78,5 +80,6 @@ void pozitionare_colturi(int cub[10][10][10])
             break;
     }
     if (nr == 6)
-        printf("Eroare la pasul 6");
+        printf("Eroare la pasul 6'\n");
+    //afisare(cub);
 }
